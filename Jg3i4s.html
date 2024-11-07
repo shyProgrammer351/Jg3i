@@ -1,0 +1,66 @@
+<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7250753558435816" crossorigin="anonymous"></script> 		<link rel="stylesheet" href="../layout.css"> 		<script type="text/javascript" src="../functions.js"></script> 		<script> 			const sP3d10 = "20 24 3 6 23 26 28 12 15 7 11 29 27"; 		</script> 	</head> 	<body oncontextmenu="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> JAVA 프로그래밍 </div> 			<div id = "navigationBox"><ol start=0><li><a href='../Jf0i/Jf0i0.html'>JAVA 프로그래밍 시작</a></li><li><a href='../Jf1i/Jf1i0.html'>출력</a></li><li><a href='../Jf2i/Jf2i0.html'>입력</a></li><li><a href='../Jf3i/Jf3i0.html'>변수</a></li><li><a href='../Jf4i/Jf4i0.html'>연산자</a></li><li><a href='../Jf5i/Jf5i0.html'>선택문(삼항연산자/switch)</a></li><li><a href='../Jf6i/Jf6i0.html'>선택문(if)</a></li><li><a href='../Jf7i/Jf7i0.html'>반복문(while)</a></li><li><a href='../Jf8i/Jf8i0.html'>반복문(for)</a></li><li><a href='../Jf9i/Jf9i0.html'>배열</a></li><li><a href='../Jg0i/Jg0i0.html'>문자열/컬렉션</a></li><li><a href='../Jg1i/Jg1i0.html'>클래스/패키지</a></li><li><a href='../Jg2i/Jg2i0.html'>상속/다형성</a></li><li><a href='../Jg3i/Jg3i0.html'>GUI기초</a></li><ul><li><a href='../Jg3i/Jg3i1.html'>자동문</a></li><li><a href='../Jg3i/Jg3i2.html'>폰트 속성 변경</a></li><li><a href='../Jg3i/Jg3i3.html'>Up&Down 게임</a></li><li><a href='../Jg3i/Jg3i4.html'>마우스 클릭 좌표</a></li><ul><li><a href='Jg3i4.html'>코드읽기</a></li><li><a href='Jg3i4a.html'>알고리즘</a></li><li><a href='Jg3i4k.html'>키워드</a></li><li><a href='Jg3i4b.html'>빈칸채우기</a></li><li><a href='Jg3i4s.html'>실행순서</a></li><li><a href='Jg3i4m.html'>실행상태</a></li><li><a href='https://github.com/CodeReading101/JAVA/blob/main/Chapter13/CoordinateGUI.java' target='code'>소스코드</a></li></ul><li><a href='../Jg3i/Jg3i5.html'>심리테스트</a></li></ul><li><a href='../Jg4i/Jg4i0.html'>GUI응용</a></li><li><a href='../Jg5i/Jg5i0.html'>예외/쓰레드</a></li><li><a href='../Jg6i/Jg6i0.html'>파일입출력</a></li><li><a href='../Jg7i/Jg7i0.html'>네트워크(1:1)</a></li><li><a href='../Jg8i/Jg8i0.html'>네트워크(1:n)</a></li><li><a href='../Jg9i/Jg9i0.html'>열거형/제네릭</a></li><li><a href='../Jh0i/Jh0i0.html'>재귀함수</a></li></ol></div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>마우스로 클릭하면 점이 생기고 해당 좌표를 알려주는 GUI 문제입니다 실행순서를 클릭하세요 </pre> 				
+<img src = "https://shyprogrammer351.github.io/ig3i/GUI/GUI_JL06_Coordinates_1.png" >
+<img src = "https://shyprogrammer351.github.io/ig3i/GUI/GUI_JL06_Coordinates_2.png" >
+<pre> 
+</pre><br>  	 				<h4>프로그램 코드</h4> 				<pre></pre><pre id="code0" class="unselectable codeClass">	import javax.swing.JFrame;
+</pre><pre id="code0" class="unselectable codeClass">	import javax.swing.JPanel;
+</pre><pre id="code0" class="unselectable codeClass">	import java.awt.*;
+</pre><pre id="code0" class="unselectable codeClass">	import java.awt.event.*;
+
+</pre><pre id="code0" class="unselectable codeClass">	class CoordinatesPanel extends JPanel
+</pre><pre id="code0" class="unselectable codeClass">	{
+</pre><pre id="code0" class="unselectable codeClass">		private final int SIZE = 6;
+</pre><pre id="code0" class="unselectable codeClass">		private int x = 50, y = 50;
+
+</pre><pre id="code3" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('3')">3		public CoordinatesPanel()
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="code0" class="unselectable codeClass">			addMouseListener( new CoordinatesListener() );
+</pre><pre id="code0" class="unselectable codeClass">			setBackground( Color.black );
+</pre><pre id="code6" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('6')">6			setPreferredSize( new Dimension(300, 200) );
+</pre><pre id="code0" class="unselectable codeClass">		}
+
+</pre><pre id="code7" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('7')">7		public void paintComponent (Graphics page)
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="code0" class="unselectable codeClass">			super.paintComponent(page);
+
+</pre><pre id="code0" class="unselectable codeClass">			page.setColor (Color.green);
+
+</pre><pre id="code0" class="unselectable codeClass">			page.fillOval (x, y, SIZE, SIZE);
+
+</pre><pre id="code11" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('11')">11			page.drawString ("Coordinates: (" + x + ", " + y + ")", 5, 15);
+</pre><pre id="code0" class="unselectable codeClass">		}
+
+</pre><pre id="code0" class="unselectable codeClass">		private class CoordinatesListener implements MouseListener
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="code12" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('12')">12			public void mousePressed (MouseEvent event)
+</pre><pre id="code0" class="unselectable codeClass">			{
+</pre><pre id="code0" class="unselectable codeClass">				x = event.getX();
+</pre><pre id="code0" class="unselectable codeClass">				y = event.getY();
+</pre><pre id="code15" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('15')">15				repaint();
+</pre><pre id="code0" class="unselectable codeClass">			}
+
+</pre><pre id="code0" class="unselectable codeClass">			public void mouseClicked (MouseEvent event) {}
+</pre><pre id="code0" class="unselectable codeClass">			public void mouseReleased (MouseEvent event) {}
+</pre><pre id="code0" class="unselectable codeClass">			public void mouseEntered (MouseEvent event) {}
+</pre><pre id="code19" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('19')">19			public void mouseExited (MouseEvent event) {}
+</pre><pre id="code0" class="unselectable codeClass">		}
+</pre><pre id="code0" class="unselectable codeClass">	}
+
+</pre><pre id="code28" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('28')">28	<font color="green">// (211,142) 좌표에 클릭</font>
+</pre><pre id="code29" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('29')">29	<font color="green">// 프레임 우측상단 X버튼 클릭하기(종료)</font>
+
+</pre><pre id="code0" class="unselectable codeClass">	public class CoordinateGUI
+</pre><pre id="code0" class="unselectable codeClass">	{
+</pre><pre id="code20" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('20')">20		public static void main (String[] args)
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="code0" class="unselectable codeClass">			JFrame frame = new JFrame ("Coordinates");
+</pre><pre id="code0" class="unselectable codeClass">			frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+</pre><pre id="code23" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('23')">23			frame.getContentPane().add (
+</pre><pre id="code24" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('24')">24					new CoordinatesPanel());
+</pre><pre id="code0" class="unselectable codeClass">			frame.pack();
+</pre><pre id="code26" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('26')">26			frame.setVisible(true);
+</pre><pre id="code27" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('27')">27			return;
+</pre><pre id="code0" class="unselectable codeClass">		}
+</pre><pre id="code0" class="unselectable codeClass">	}
+</pre>
+</pre> 				<br><br><br><br><br><br><br><br> &nbsp;  			</div> 			<div id = "floatingBox"> 				<b>실행 순서</b> 				<pre id = "sP3d4" style='white-space:normal; word-wrap:break-word; width:150px;'></pre> 			</div> 		</div> 	</body> </html>   
