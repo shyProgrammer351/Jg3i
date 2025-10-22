@@ -123,10 +123,9 @@
 </pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre>
 <pre id="codeL2b" class="unselectable codeClass">L2b		public void actionPerformed( ActionEvent event ) {
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">// 승패 결과 제시</font>
 </pre><pre id="code0" class="unselectable codeClass">			int playerA = select( event );
-</pre><pre id="code0" class="unselectable codeClass">			int playerB = (int)(Math.random()*3);
-</pre><pre id="code0" class="unselectable codeClass">			 
-</pre><pre id="code0" class="unselectable codeClass">			<font color="green">// 승패 결과</font>
+</pre><pre id="code0" class="unselectable codeClass">			int playerB = (int)( Math.random() * 3 );
 </pre>
 <pre id="codeL21" class="unselectable codeClass">L21			show( playerA, playerB );
 </pre><pre id="code0" class="unselectable codeClass">			<font color="green">// 다음 판은 잠시 대기</font>
